@@ -328,13 +328,18 @@ function Registration() {
                         </Form.Group>
                         <Form.Group controlId="formSpecialization" className="mb-3">
                             <Form.Label>Специализация</Form.Label>
-                            <Form.Control
+                            <Form.Select
                                 name="specialization"
                                 value={formData.specialization}
                                 onChange={handleChange}
-                                placeholder="Введите специализацию"
-                                className="registration-input"
-                            />
+                                className="registration-select"
+                            >
+                                <option value="">Выберите специализацию</option>
+                                <option value="легковой транспорт">Легковой транспорт</option>
+                                <option value="грузовой транспорт">Грузовой транспорт</option>
+                                <option value="мотоциклы">Мотоциклы</option>
+                                <option value="универсальное оборудование">Универсальное оборудование</option>
+                            </Form.Select>
                         </Form.Group>
                         <Form.Group controlId="formServiceAvailability" className="mb-3">
                             <Form.Label>Наличие сервиса</Form.Label>
