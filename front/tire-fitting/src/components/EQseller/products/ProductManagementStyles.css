@@ -1,0 +1,157 @@
+/* ProductManagementStyles.css */
+
+/* Общие стили для body и шрифтов */
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #ece9e6, #ffffff);
+    margin: 0;
+    padding: 0;
+}
+
+/* Контейнер для управления товарами */
+.container.my-4 {
+    background: #fff;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-out;
+}
+
+/* Заголовок компонента */
+h2 {
+    font-size: 2.5rem;
+    color: #ff6f61;
+    text-align: center;
+    margin-bottom: 25px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Кнопка "Добавить продукт" */
+.btn-primary {
+    background: linear-gradient(45deg, #ff6f61, #ff9472);
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 25px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-primary:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(255, 111, 97, 0.4);
+}
+
+/* Таблица товаров */
+.table {
+    border-collapse: separate;
+    border-spacing: 0 10px;
+}
+
+.table thead th {
+    background: #ff6f61;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.table tbody tr {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.table tbody tr:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.table tbody td {
+    text-align: center;
+    vertical-align: middle;
+    padding: 12px;
+}
+
+/* Стили для кнопок действий в таблице */
+.btn-info,
+.btn-warning,
+.btn-danger {
+    border: none;
+    border-radius: 8px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-info:hover,
+.btn-warning:hover,
+.btn-danger:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Модальное окно (общие стили) */
+.modal-content {
+    border-radius: 15px;
+    overflow: hidden;
+    background: linear-gradient(145deg, #ffffff, #f0f0f0);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    animation: slideIn 0.5s ease-out;
+}
+
+/* Анимация появления модального окна */
+@keyframes slideIn {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Стили для форм */
+.form-control,
+.form-select {
+    border-radius: 8px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: #ff6f61;
+    box-shadow: 0 0 8px rgba(255, 111, 97, 0.5);
+}
+
+/* Стили для файловых инпутов */
+input[type="file"] {
+    padding: 3px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #fafafa;
+}
+
+/* Стили для изображения в модальном окне деталей */
+.modal-body img {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 100%;
+    height: auto;
+}
+
+/* Кастомная анимация для контейнера */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
